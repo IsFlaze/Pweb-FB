@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMAIT Al-Uswah Surabaya - Kontak</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand">
+        <img src="assets/logo.png" alt="Logo [Nama Sekolah]" onerror="this.src='assets/logo.svg'">
+        <div class="brand-text">
+          <div class="nama-sekolah">SMAIT Al-Uswah Surabaya</div>
+          <div class="tagline">Berakhlak dan Berprestasi</div>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Menu utama">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jurusan.html">Jurusan</a></li>
+          <li><a href="kontak.html" aria-current="page">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <div class="kop-section">Hubungi Kami</div>
+      <h2>Informasi &amp; Formulir Kontak</h2>
+      <p>Punya pertanyaan seputar pendaftaran, akademik, atau kerja sama? Hubungi kami untuk mendapatkan informasi lebih lanjut.</p>
+
+      <div class="kontak-grid">
+
+
+        <div class="info-kontak">
+          <ul>
+            <li>
+              <strong>Alamat</strong>
+              Jl. Medokan Semampir Indah No.127, Medokan Semampir, Kec. Sukolilo, Kota SBY, Jawa Timur 60119
+            </li>
+            <li>
+              <strong>Telepon</strong>
+              (031) 5937630
+            </li>
+            <li>
+              <strong>Email</strong>
+              AlUswahSurabaya@sekolah.sch.id
+            </li>
+            <li>
+              <strong>Jam Operasional</strong>
+              Senin - Jumat, 07.00 - 15.00 WIB
+            </li>
+            <li>
+              <strong>Media Sosial</strong>
+                <ul>
+                  WhatsApp: +62 857-3184-4466
+                  <br>
+                  Instagram: @smaitaluswahsby
+                  <br>
+                  Youtube: smaitaluswahsurabaya8899
+                </ul>
+            </li>
+          </ul>
+
+          <br><br><br><br><br>
+        </div>
+
+        <!-- ---- Form kontak ---- -->
+        <form class="form-kontak" id="formKontak">
+          <div class="field">
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Alamat Email</label>
+            <input type="email" id="email" name="email" placeholder="nama@email.com" required>
+          </div>
+
+          <div class="field">
+            <label for="subjek">Subjek</label>
+            <input type="text" id="subjek" name="subjek" placeholder="Contoh: Informasi Pendaftaran">
+          </div>
+
+          <div class="field">
+            <label for="pesan">Pesan</label>
+            <textarea id="pesan" name="pesan" placeholder="Tulis pesan Anda di sini..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn-kirim">Kirim Pesan</button>
+          <p class="form-pesan" id="formPesan" aria-live="polite"></p>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="tahun">2026</span> [Nama Sekolah]. Seluruh hak cipta dilindungi.</p>
+      <nav class="footer-nav" aria-label="Menu footer">
+        <a href="index.html">Home</a>
+        <a href="jurusan.html">Jurusan</a>
+        <a href="kontak.html">Kontak</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('tahun').textContent = new Date().getFullYear();
+    document.getElementById('formKontak').addEventListener('submit', function (e) {
+      e.preventDefault();
+      document.getElementById('formPesan').textContent =
+        'Terima kasih, pesan Anda telah terkirim. Kami akan segera menghubungi Anda.';
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>

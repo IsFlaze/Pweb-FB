@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMAIT Al-Uswah Surabaya - Penjurusan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand">
+        <img src="assets/logo.png" alt="Logo [Nama Sekolah]" onerror="this.src='assets/logo.svg'">
+        <div class="brand-text">
+          <div class="nama-sekolah">SMAIT Al-Uswah Surabaya</div>
+          <div class="tagline">Berakhlak dan Berprestasi</div>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Menu utama">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jurusan.html" aria-current="page">Jurusan</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <div class="kop-section">Program Keahlian</div>
+      <h2>Jurusan yang Tersedia</h2>
+      <p>
+        Di Al-Uswah, kami membagi penjurusan menjadi tiga program unggulan yang disesuaikan dengan minat dan potensi siswa. Ketiga program tersebut memberikan kesempatan bagi siswa untuk mengembangkan kemampuan di bidang yang sesuai dengan ketertarikan dan tujuan mereka.
+      </p>
+
+      <div class="jurusan-list">
+
+        <article class="jurusan-card">
+          <h2>Paket A</h2>
+          <p>Fokus Sains & Kebahasaan</p>
+          <ul>
+            <li>Mata Pelajaran Utama: Biologi, Fisika, Kimia</li>
+            <li>Mata Pelajaran Kebahasaan: B. Inggris Lanjut & B. Arab</li>
+            <li>Prospek karier berkaitan dengan Kedokteran dan Pertanian</li>
+          </ul>
+        </article>
+
+        <article class="jurusan-card">
+          <h2>Paket B</h2>
+          <p>Fokus Sosial & Kebahasaan</p>
+          <ul>
+            <li>Mata Pelajaran Utama: Biologi, Sosiologi, Ekonomi</li>
+             <li>Mata Pelajaran Kebahasaan: B. Inggris Lanjut & B. Arab</li>
+            <li>Prospek karier berkaitan dengan Soshum</li>
+          </ul>
+        </article>
+
+        <article class="jurusan-card">
+          <h2>Paket C</h2>
+          <p>Fokus Sains Lanjut & Kuantitatif</p>
+          <ul>
+            <li>Mata Pelajaran Utama: Fisika, Kimia, Mat. Lanjut, Geografi</li>
+            <li>Mata Pelajaran Kebahasaan: B. Inggris Lanjut & B. Arab</li>            
+            <li>Prospek karier berkaitan dengan Teknik</li>
+          </ul>
+        </article>
+
+
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="kop-section">Statistik</div>
+      <h2>Jumlah Siswa Tiap Jurusan</h2>
+
+      <table class="tabel-siswa">
+        <caption>Data jumlah siswa Tahun Ajaran [2026/2027]</caption>
+        <thead>
+          <tr>
+            <th scope="col">No</th>
+            <th scope="col">Jurusan</th>
+            <th scope="col">Kelas X</th>
+            <th scope="col">Kelas XI</th>
+            <th scope="col">Kelas XII</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Paket A</td>
+            <td>39</td>
+            <td>46</td>
+            <td>25</td>
+            <td>110</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Paket B</td>
+            <td>27</td>
+            <td>37</td>
+            <td>35</td>
+            <td>100</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Paket C</td>
+            <td>50</td>
+            <td>47</td>
+            <td>43</td>
+            <td>140</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="5">Total Keseluruhan Siswa</td>
+            <td>350</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="tahun">2026</span> SMAIT Al-Uswah Surabaya. Seluruh hak cipta dilindungi.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('tahun').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

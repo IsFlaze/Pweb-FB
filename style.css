@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap');
+
+:root {
+  --bg: #F7F5EF;
+  --surface: #FFFFFF;
+  --ink: #f7a500;
+  --ink-soft: #4B5A68;
+  --accent: #B8863C;
+  --accent-2: #13ab05;
+  --line: #E1DBCB;
+
+  --font-heading: 'Fraunces', Georgia, serif;
+  --font-body: 'Work Sans', Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: var(--accent-2); }
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  color: var(--ink);
+  line-height: 1.2;
+  margin: 0 0 0.6em;
+}
+
+h1 { font-size: clamp(1.9rem, 3vw, 2.6rem); font-weight: 600; }
+h2 { font-size: clamp(1.4rem, 2.4vw, 1.9rem); font-weight: 600; }
+h3 { font-size: 1.2rem; font-weight: 600; }
+
+p { margin: 0 0 1em; color: var(--ink-soft); }
+
+.container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+
+.site-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+
+.brand img {
+  width: 48px;
+  height: 48px;
+}
+
+.brand-text .nama-sekolah {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.brand-text .tagline {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+}
+
+nav.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+nav.main-nav a {
+  text-decoration: none;
+  color: var(--ink);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+nav.main-nav a:hover,
+nav.main-nav a[aria-current="page"] {
+  color: var(--accent-2);
+  border-bottom-color: var(--accent);
+}
+
+
+.hero {
+  padding: 64px 0 48px;
+  border-bottom: 1px solid var(--line);
+}
+
+.hero .container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.hero-foto {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  padding: 10px;
+}
+
+.hero-foto img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.hero-foto figcaption {
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  text-align: center;
+}
+
+.kop-section {
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  color: var(--accent-2);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+
+section {
+  padding: 56px 0;
+}
+
+section + section {
+  border-top: 1px solid var(--line);
+}
+
+.visi-misi-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 28px;
+}
+
+.visi-misi-grid .kotak {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 28px;
+}
+
+.visi-misi-grid ul,
+.visi-misi-grid ol {
+  padding-left: 1.2em;
+  color: var(--ink-soft);
+}
+
+.visi-misi-grid li { margin-bottom: 0.5em; }
+
+/* ---------- JURUSAN ---------- */
+
+.jurusan-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.jurusan-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 24px;
+}
+
+.jurusan-card ul {
+  padding-left: 1.2em;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+table.tabel-siswa {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 24px;
+  background: var(--surface);
+}
+
+table.tabel-siswa caption {
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--ink);
+}
+
+table.tabel-siswa th,
+table.tabel-siswa td {
+  border: 1px solid var(--line);
+  padding: 12px 14px;
+  text-align: left;
+}
+
+table.tabel-siswa thead th {
+  background: var(--ink);
+  color: var(--bg);
+  font-weight: 600;
+}
+
+table.tabel-siswa tbody tr:nth-child(even) {
+  background: rgba(184, 134, 60, 0.06);
+}
+
+table.tabel-siswa tfoot td {
+  font-weight: 600;
+  background: rgba(68, 94, 78, 0.08);
+}
+
+
+.kontak-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 48px;
+  margin-top: 24px;
+}
+
+.info-kontak ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.info-kontak li {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink-soft);
+}
+
+.info-kontak li strong {
+  display: block;
+  color: var(--ink);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin-bottom: 4px;
+}
+
+.peta-wrapper {
+  margin-top: 24px;
+  border: 1px solid var(--line);
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.peta-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+form.form-kontak {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.field input,
+.field textarea {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+  border-color: var(--accent);
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+button.btn-kirim {
+  align-self: flex-start;
+  background: var(--ink);
+  color: var(--bg);
+  border: none;
+  padding: 13px 28px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+button.btn-kirim:hover {
+  background: var(--accent-2);
+}
+
+.form-pesan {
+  font-size: 0.85rem;
+  color: var(--accent-2);
+  min-height: 1.2em;
+}
+
+
+footer.site-footer {
+  background: var(--ink);
+  color: var(--bg);
+  padding: 28px 0;
+  margin-top: 0;
+}
+
+footer.site-footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+footer.site-footer p {
+  margin: 0;
+  color: rgba(247, 245, 239, 0.75);
+  font-size: 0.9rem;
+}
+
+footer.site-footer .footer-nav a {
+  color: rgba(247, 245, 239, 0.85);
+  text-decoration: none;
+  margin-left: 18px;
+  font-size: 0.9rem;
+}
+
+footer.site-footer .footer-nav a:hover { color: var(--accent); }
+
+
+@media (max-width: 760px) {
+  .hero .container,
+  .visi-misi-grid,
+  .jurusan-list,
+  .kontak-grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav.main-nav ul {
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+
+  footer.site-footer .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  footer.site-footer .footer-nav a:first-child { margin-left: 0; }
+}
