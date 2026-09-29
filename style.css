@@ -1,13 +1,18 @@
+/* =========================================================
+   TEMPLATE WEBSITE PROFIL SEKOLAH
+   Ganti nilai di bagian :root untuk mengubah tema warna
+   ========================================================= */
+
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap');
 
 :root {
-  --bg: #F7F5EF;
+  --bg: #FFFFFF;
   --surface: #FFFFFF;
-  --ink: #f7a500;
+  --ink: #1E2A38;
   --ink-soft: #4B5A68;
-  --accent: #B8863C;
-  --accent-2: #13ab05;
-  --line: #E1DBCB;
+  --accent: #F5720F;
+  --accent-2: #C25A0B;
+  --line: #E7E2D8;
 
   --font-heading: 'Fraunces', Georgia, serif;
   --font-body: 'Work Sans', Arial, sans-serif;
@@ -49,6 +54,7 @@ p { margin: 0 0 1em; color: var(--ink-soft); }
   padding: 0 24px;
 }
 
+/* ---------- HEADER & NAVIGASI ---------- */
 
 .site-header {
   background: var(--surface);
@@ -116,6 +122,49 @@ nav.main-nav a[aria-current="page"] {
   border-bottom-color: var(--accent);
 }
 
+/* ---------- FOTO LEBAR (BANNER) ---------- */
+
+.foto-lebar {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(135deg, var(--ink), var(--accent-2)); /* fallback selama foto asli belum dipasang */
+}
+
+.foto-lebar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.foto-lebar-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(30,42,56,0) 40%, rgba(30,42,56,0.75) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 28px 24px;
+}
+
+.foto-lebar-overlay p {
+  color: var(--bg);
+  font-family: var(--font-heading);
+  font-size: clamp(1.2rem, 2.4vw, 1.7rem);
+  font-weight: 600;
+  margin: 0;
+  max-width: 1080px;
+  margin-inline: auto;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .foto-lebar { height: 240px; }
+}
+
+/* ---------- HERO / SAMBUTAN ---------- */
 
 .hero {
   padding: 64px 0 48px;
@@ -156,6 +205,7 @@ nav.main-nav a[aria-current="page"] {
   margin-bottom: 10px;
 }
 
+/* ---------- SECTION UMUM ---------- */
 
 section {
   padding: 56px 0;
@@ -185,6 +235,52 @@ section + section {
 }
 
 .visi-misi-grid li { margin-bottom: 0.5em; }
+
+/* ---------- PRESTASI ---------- */
+
+.prestasi-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.prestasi-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  overflow: hidden;
+}
+
+.prestasi-card img {
+  width: 100%;
+  height: auto;
+}
+
+.prestasi-isi {
+  padding: 18px 22px 22px;
+}
+
+.prestasi-tahun {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-2);
+  letter-spacing: 0.03em;
+  margin-bottom: 8px;
+}
+
+.prestasi-card h3 {
+  margin-bottom: 6px;
+}
+
+.prestasi-card p {
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .prestasi-grid { grid-template-columns: 1fr; }
+}
 
 /* ---------- JURUSAN ---------- */
 
@@ -243,6 +339,7 @@ table.tabel-siswa tfoot td {
   background: rgba(68, 94, 78, 0.08);
 }
 
+/* ---------- KONTAK ---------- */
 
 .kontak-grid {
   display: grid;
@@ -330,8 +427,8 @@ form.form-kontak {
 
 button.btn-kirim {
   align-self: flex-start;
-  background: var(--ink);
-  color: var(--bg);
+  background: var(--accent);
+  color: #FFFFFF;
   border: none;
   padding: 13px 28px;
   font-family: var(--font-body);
@@ -351,10 +448,11 @@ button.btn-kirim:hover {
   min-height: 1.2em;
 }
 
+/* ---------- FOOTER ---------- */
 
 footer.site-footer {
-  background: var(--ink);
-  color: var(--bg);
+  background: var(--accent);
+  color: #FFFFFF;
   padding: 28px 0;
   margin-top: 0;
 }
@@ -369,19 +467,20 @@ footer.site-footer .container {
 
 footer.site-footer p {
   margin: 0;
-  color: rgba(247, 245, 239, 0.75);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 0.9rem;
 }
 
 footer.site-footer .footer-nav a {
-  color: rgba(247, 245, 239, 0.85);
+  color: rgba(255, 255, 255, 0.95);
   text-decoration: none;
   margin-left: 18px;
   font-size: 0.9rem;
 }
 
-footer.site-footer .footer-nav a:hover { color: var(--accent); }
+footer.site-footer .footer-nav a:hover { color: var(--ink); }
 
+/* ---------- RESPONSIVE ---------- */
 
 @media (max-width: 760px) {
   .hero .container,
